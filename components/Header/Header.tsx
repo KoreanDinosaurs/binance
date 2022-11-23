@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import data from 'data.json'
+import { useRouter } from 'next/router'
+import { useTranslation } from 'react-i18next'
 
 import MenuIcon from 'public/image/menu.svg'
 import DropDown from 'components/DropDown/DropDown'
@@ -28,6 +30,8 @@ export default function Header() {
 }
 
 const Navigation = () => {
+  const { t } = useTranslation('header')
+
   return (
     <S.Nav>
       <S.Nav__ul>
@@ -36,37 +40,51 @@ const Navigation = () => {
             <MenuIcon width={20} height={20} />
           </DropDown>
         </li>
-        <li>Buy Crypto</li>
-        <li>Markets</li>
-        <li>Trade</li>
-        <li>Derivatives</li>
-        <li>Earn</li>
-        <li>Finance</li>
-        <li>NFT</li>
-        <li>Institutional</li>
-        <li>Feed</li>
+        <li>{t('buy')}</li>
+        <li>{t('markets')}</li>
+        <li>{t('trade')}</li>
+        <li>{t('derivatives')}</li>
+        <li>{t('earn')}</li>
+        <li>{t('finance')}</li>
+        <li>{t('nft')}</li>
+        <li>{t('institutional')}</li>
+        <li>{t('feed')}</li>
       </S.Nav__ul>
     </S.Nav>
   )
 }
 
 const User = () => {
+  const { t } = useTranslation('header')
+
   return (
     <S.User__ul>
       <li>
-        <Link href="/login">Log In</Link>
+        <Link href="/login">{t('login')}</Link>
       </li>
-      <li>Register</li>
+      <li>{t('signup')}</li>
     </S.User__ul>
   )
 }
 
 const Tool = () => {
+  const { t } = useTranslation('header')
+  const router = useRouter()
+  const { locale } = router
+
+  const handleLang = () => {
+    if (locale == 'ko') {
+      return router.push('BTC_BUSD', 'BTC_BUSD', { locale: 'en' })
+    } else {
+      return router.push('BTC_BUSD', 'BTC_BUSD', { locale: 'ko' })
+    }
+  }
+
   return (
     <S.Tool__ul>
-      <li>Downloads</li>
-      <li>English</li>
-      <li>USD</li>
+      <li>{t('download')}</li>
+      <li onClick={handleLang}>{t('lang')}</li>
+      <li>{t('currency')}</li>
     </S.Tool__ul>
   )
 }
