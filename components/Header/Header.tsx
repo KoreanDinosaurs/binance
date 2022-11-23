@@ -1,10 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
-import data from 'data.json'
-import * as S from './Header.styled'
-import MenuIcon from 'public/image/menu.svg'
 import Link from 'next/link'
+
+import data from 'data.json'
+
+import MenuIcon from 'public/image/menu.svg'
 import DropDown from 'components/DropDown/DropDown'
+
+import * as S from './Header.styled'
 
 export default function Header() {
   return (
@@ -51,11 +54,9 @@ const User = () => {
   return (
     <S.User__ul>
       <li>
-        <Link href={'#'}>Log In</Link>
+        <Link href="/login">Log In</Link>
       </li>
-      <li>
-        <Link href={'#'}>Register</Link>
-      </li>
+      <li>Register</li>
     </S.User__ul>
   )
 }
@@ -65,7 +66,6 @@ const Tool = () => {
     <S.Tool__ul>
       <li>Downloads</li>
       <li>English</li>
-      <li>|</li>
       <li>USD</li>
     </S.Tool__ul>
   )
