@@ -3,6 +3,6 @@ import Router from 'next/router'
 
 export default function Home() {
   React.useEffect(() => {
-    Router.push('trade/BTC_BUSD')
+    Router.push('trade/BTC_BUSD', 'trade/BTC_BUSD', { locale: 'en' })
   }, [])
 }

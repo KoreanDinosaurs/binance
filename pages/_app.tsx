@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app'
+import { appWithTranslation } from 'next-i18next'
 
 import { RecoilRoot } from 'recoil'
 
@@ -6,7 +7,7 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyle from 'styles/globalstyles'
 import theme from 'styles/theme'
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
       <ThemeProvider theme={theme}>
@@ -16,3 +17,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </RecoilRoot>
   )
 }
+
+export default appWithTranslation(App)
