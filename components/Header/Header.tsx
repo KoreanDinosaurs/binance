@@ -1,8 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
-
+import data from 'data.json'
 import * as S from './Header.styled'
+import MenuIcon from 'public/image/menu.svg'
 import Link from 'next/link'
+import DropDown from 'components/DropDown/DropDown'
 
 export default function Header() {
   return (
@@ -24,8 +26,13 @@ export default function Header() {
 
 const Navigation = () => {
   return (
-    <nav>
+    <S.Nav>
       <S.Nav__ul>
+        <li>
+          <DropDown category={data.menu.All} column={3}>
+            <MenuIcon width={20} height={20} />
+          </DropDown>
+        </li>
         <li>Buy Crypto</li>
         <li>Markets</li>
         <li>Trade</li>
@@ -36,7 +43,7 @@ const Navigation = () => {
         <li>Institutional</li>
         <li>Feed</li>
       </S.Nav__ul>
-    </nav>
+    </S.Nav>
   )
 }
 
