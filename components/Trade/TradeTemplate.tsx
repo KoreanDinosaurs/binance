@@ -1,5 +1,6 @@
 import React from 'react'
 import Chart from './Chart'
+import Market from './Market'
 
 import * as S from './TradeTemplate.styled'
 
@@ -8,7 +9,7 @@ export default function TradeTemplate() {
     <S.Trade>
       <div>left</div>
       <div>subheader</div>
-      <div>market</div>
+      <Market />
       <div>orderbook</div>
       <Chart />
       <div>trades</div>
