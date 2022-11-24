@@ -13,11 +13,16 @@ export const Trade = styled.main`
     'left orderbook orderform trades right'
     'left orderbook orderform marketActivity right'
     'left basictable basictable basictable right';
+  grid-gap: 1px;
+  margin-top: 1px;
+
   & div:nth-of-type(1) {
     grid-area: left;
+    background-color: ${({ theme }) => theme.colors.bgColor};
   }
 
-  & div:nth-of-type(8) {
+  & div:nth-of-type(7) {
     grid-area: right;
+    background-color: ${({ theme }) => theme.colors.bgColor};
   }
 `

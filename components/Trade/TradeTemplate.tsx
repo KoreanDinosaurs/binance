@@ -1,14 +1,16 @@
 import React from 'react'
+
 import Chart from './Chart'
 import Market from './Market'
+import SubHeader from '@components/SubHeader'
 
 import * as S from './TradeTemplate.styled'
 
 export default function TradeTemplate() {
   return (
     <S.Trade>
-      <div>left</div>
-      <div>subheader</div>
+      <div></div>
+      <SubHeader />
       <Market />
       <div>orderbook</div>
       <Chart />
@@ -16,7 +18,7 @@ export default function TradeTemplate() {
       <div>orderform</div>
       <div>marketActivity</div>
       <div>basictable</div>
-      <div>right</div>
+      <div></div>
     </S.Trade>
   )
 }

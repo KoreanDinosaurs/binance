@@ -13,16 +13,17 @@ export const SearchContainer = styled.div`
 `
 
 export const Search = styled.input`
-  background: var(--color-gray-70);
+  background: ${({ theme }) => theme.colors.inputColor};
   border: none;
   outline: none;
   padding: 0.3rem;
   padding-left: 1.5rem;
   border-radius: 0.3rem;
-  color: black;
+  color: ${({ theme }) => theme.colors.textColor};
   width: 100%;
 
   &::placeholder {
+    font-size: 12px;
     color: var(--color-gray-400);
   }
 `

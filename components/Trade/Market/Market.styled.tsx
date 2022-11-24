@@ -7,14 +7,13 @@ export const Market = styled.section`
 `
 
 export const MarketTab = styled.div`
-  margin-top: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 0.7rem;
   color: var(--color-gray-400);
   font-weight: 600;
-  padding: 0 1.2rem;
+  padding: 14px 20px;
 
   svg {
     &:hover {

@@ -9,17 +9,22 @@ const GlobalStyle = createGlobalStyle`
     --color-gray-100: #f5f5f5;
     --color-gray-200: #eeeeee;
     --color-gray-300: #e0e0e0;
-    --color-gray-400: #707a8a
+    --color-gray-400: #707a8a;
+
+    --color-border: #eef0f2;
   }
   html,
   body {
     color: ${({ theme }) => theme.colors.textColor};
-    background-color: ${({ theme }) => theme.colors.bgColor};
+    background-color: #eef0f2;
     font-family: 'Noto Sans KR', sans-serif;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+  }
+  section, header {
+    background-color: ${({ theme }) => theme.colors.bgColor};
   }
   a {
     color: inherit;

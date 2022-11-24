@@ -36,7 +36,9 @@ export default function Market() {
 
   return (
     <S.Market>
-      <Search />
+      <div style={{ padding: '1rem 1rem 0' }}>
+        <Search />
+      </div>
       <S.MarketTab>
         <StarIcon
           width={10}
