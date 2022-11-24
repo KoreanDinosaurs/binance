@@ -11,7 +11,7 @@ export const ToggleContainer = styled.div`
   position: relative;
 `
 
-export const ToggleRound = styled.div<{ mode: boolean }>`
+export const ToggleRound = styled.div<{ themeMode: boolean }>`
   width: 22px;
   height: 22px;
   border-radius: 1rem;
@@ -20,8 +20,8 @@ export const ToggleRound = styled.div<{ mode: boolean }>`
   align-items: center;
   position: absolute;
   transition: all 0.5s ease;
-  ${({ mode }) =>
-    mode &&
+  ${({ themeMode }) =>
+    themeMode &&
     css`
       transform: translateX(26px) rotate(360deg);
     `}

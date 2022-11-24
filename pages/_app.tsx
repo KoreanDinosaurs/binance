@@ -1,19 +1,18 @@
 import type { AppProps } from 'next/app'
 import { appWithTranslation } from 'next-i18next'
-
 import { RecoilRoot } from 'recoil'
 
-import { ThemeProvider } from 'styled-components'
+import Layout from '@components/Layout'
+
 import GlobalStyle from 'styles/globalstyles'
-import theme from 'styles/theme'
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
-      <ThemeProvider theme={theme}>
+      <Layout>
         <GlobalStyle />
         <Component {...pageProps} />
-      </ThemeProvider>
+      </Layout>
     </RecoilRoot>
   )
 }

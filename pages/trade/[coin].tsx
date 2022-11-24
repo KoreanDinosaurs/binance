@@ -1,7 +1,5 @@
 import React from 'react'
 
-import Header from 'components/Header'
-
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export async function getServerSideProps({ locale }: any) {
@@ -13,9 +11,5 @@ export async function getServerSideProps({ locale }: any) {
 }
 
 export default function Coin() {
-  return (
-    <>
-      <Header />
-    </>
-  )
+  return <></>
 }
