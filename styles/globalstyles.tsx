@@ -29,6 +29,9 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
     cursor: pointer;
   }
+  svg {
+    cursor: pointer;
+  }
   * {
     box-sizing: border-box;
     padding: 0;
