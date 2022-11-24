@@ -7,8 +7,8 @@ import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 
 import MenuIcon from 'public/image/menu.svg'
-import DropDown from 'components/DropDown/DropDown'
-import Toggle from '@components/Toggle'
+import DropDown from 'components/ui/DropDown'
+import Toggle from 'components/ui/Toggle'
 
 import * as S from './Header.styled'
 
