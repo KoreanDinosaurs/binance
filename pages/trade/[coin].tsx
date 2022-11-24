@@ -1,8 +1,7 @@
 import React from 'react'
 
-import Header from 'components/Header'
-
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import TradeTemplate from '@components/Trade/TradeTemplate'
 
 export async function getServerSideProps({ locale }: any) {
   return {
@@ -12,10 +11,6 @@ export async function getServerSideProps({ locale }: any) {
   }
 }
 
-export default function Coin() {
-  return (
-    <>
-      <Header />
-    </>
-  )
+export default function Trade() {
+  return <TradeTemplate />
 }

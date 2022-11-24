@@ -7,7 +7,8 @@ import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 
 import MenuIcon from 'public/image/menu.svg'
-import DropDown from 'components/DropDown/DropDown'
+import DropDown from 'components/ui/DropDown'
+import Toggle from 'components/ui/Toggle'
 
 import * as S from './Header.styled'
 
@@ -85,6 +86,7 @@ const Tool = () => {
       <li>{t('download')}</li>
       <li onClick={handleLang}>{t('lang')}</li>
       <li>{t('currency')}</li>
+      <Toggle />
     </S.Tool__ul>
   )
 }
