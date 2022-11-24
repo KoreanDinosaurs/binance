@@ -17,15 +17,15 @@ export const MarketTab = styled.div`
   padding: 0 1.2rem;
 
   svg {
-    fill: var(--color-gray-400);
     &:hover {
       fill: var(--color-yellow-100);
     }
   }
 `
 
-export const MarketTabItem = styled.div`
+export const MarketTabItem = styled.div<{ select: boolean }>`
   cursor: pointer;
+  ${({ select }) => select && 'color: var(--color-yellow-100);'}
   &:hover {
     color: var(--color-yellow-100);
   }

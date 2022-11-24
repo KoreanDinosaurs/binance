@@ -74,8 +74,14 @@ export const ItemWithStar = styled.div`
   display: flex;
   align-items: center;
   gap: 0.2rem;
+`
 
-  > svg {
-    fill: var(--color-gray-400);
-  }
+export const EmptyItem = styled.div`
+  font-size: 0.7rem;
+  color: var(--color-gray-400);
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 `
