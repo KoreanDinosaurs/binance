@@ -66,5 +66,33 @@
         "content": "Verified user credentials for the Web3 era"
       }
     ]
+  },
+  "trade": {
+    "BUSD": {
+      "BTC": {
+        "price": "16,539.34",
+        "change": "-15.34",
+        "high": "16,798.00",
+        "low": "16,301.01",
+        "volume": ["132,345.85", "2,190,146,536.97"]
+      },
+      "SOL": {
+        "price": "14.01",
+        "change": "0.92",
+        "high": "14.95",
+        "low": "12.69",
+        "volume": ["5,930,573.02", "82,443,294.19"]
+      },
+      "DOGE": {
+        "price": "0.0870",
+        "change": "-0.00094",
+        "high": "0.08417",
+        "low": "0.07908",
+        "volume": ["484,561,429.00", "39,466,604.69"]
+      }
+    },
+    "USDT": null,
+    "BNB": null,
+    "BTC": null
   }
 }
