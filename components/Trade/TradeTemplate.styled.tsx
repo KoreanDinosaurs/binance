@@ -15,44 +15,36 @@ export const Trade = styled.main`
     'left basictable basictable basictable right';
   & div:nth-of-type(1) {
     grid-area: left;
-    background: red;
   }
   & div:nth-of-type(2) {
     grid-area: subHeader;
-    background: coral;
   }
 
   & div:nth-of-type(3) {
     grid-area: market;
-    background: brown;
   }
   & div:nth-of-type(4) {
     grid-area: orderbook;
-    background: lightgrey;
   }
+
   & div:nth-of-type(5) {
-    grid-area: chart;
-    background: blue;
-  }
-  & div:nth-of-type(6) {
     grid-area: trades;
     background: pink;
   }
-  & div:nth-of-type(7) {
+  & div:nth-of-type(6) {
     grid-area: orderform;
     background: orange;
   }
-  & div:nth-of-type(8) {
+  & div:nth-of-type(7) {
     grid-area: marketActivity;
     background: yellow;
     height: 200px;
   }
-  & div:nth-of-type(9) {
+  & div:nth-of-type(8) {
     grid-area: basictable;
     background: green;
   }
-  & div:nth-of-type(10) {
+  & div:nth-of-type(9) {
     grid-area: right;
-    background: red;
   }
 `
