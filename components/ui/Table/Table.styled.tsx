@@ -48,6 +48,7 @@ export const TableBodyItem = styled.div`
   display: flex;
   line-height: 24px;
   padding: 0 1rem;
+  cursor: pointer;
 
   & div:nth-of-type(1) {
     flex: 5 1 0;
@@ -64,7 +65,6 @@ export const TableBodyItem = styled.div`
     display: flex;
     justify-content: flex-end;
   }
-
   &:hover {
     background: var(--color-gray-70);
   }

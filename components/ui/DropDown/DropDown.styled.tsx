@@ -5,6 +5,7 @@ export const Container = styled.div<{ focus: boolean }>`
   align-items: center;
   height: 100%;
   position: relative;
+  z-index: 100;
   > svg {
     ${({ focus }) => focus && 'transform: rotate(180deg)'};
     fill: ${({ theme }) => theme.colors.subColor};

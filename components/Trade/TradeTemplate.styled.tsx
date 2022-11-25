@@ -16,12 +16,12 @@ export const Trade = styled.main`
   grid-gap: 1px;
   margin-top: 1px;
 
-  & div:nth-of-type(1) {
+  & > div:nth-of-type(1) {
     grid-area: left;
     background-color: ${({ theme }) => theme.colors.bgColor};
   }
 
-  & div:nth-of-type(7) {
+  & > div:nth-of-type(7) {
     grid-area: right;
     background-color: ${({ theme }) => theme.colors.bgColor};
   }
