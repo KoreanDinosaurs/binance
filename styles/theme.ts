@@ -7,6 +7,7 @@ const Darktheme: DefaultTheme = {
     bgColor: '#fafafa',
     subBgColor: 'white',
     inputColor: '#f2f3f5',
+    labelColor: '#252930',
   },
 }
 
@@ -17,6 +18,7 @@ const Lighttheme: DefaultTheme = {
     bgColor: '#14151a',
     subBgColor: '#252930',
     inputColor: '#252930',
+    labelColor: '#707a8a',
   },
 }
 

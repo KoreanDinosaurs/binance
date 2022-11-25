@@ -46,7 +46,7 @@ export const TableBody = styled.div`
 
 export const TableBodyItem = styled.div`
   display: flex;
-  line-height: 24px;
+  line-height: 20px;
   padding: 0 1rem;
   cursor: pointer;
 

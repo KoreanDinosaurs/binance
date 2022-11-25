@@ -8,6 +8,7 @@ declare module 'styled-components' {
       subColor: string
       subBgColor: string
       inputColor: string
+      labelColor: string
     }
   }
 }

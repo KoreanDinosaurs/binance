@@ -51,9 +51,7 @@ const PlainTableBodyItem = ({ data }: { data: string[][] }) => {
           <S.TableBodyItem key={idx} onClick={() => handleRouter(val[0])}>
             <div>{val[0]}</div>
             <div>{val[1]}</div>
-            <div style={{ color: val[2][0] == '+' ? '#0ecb81' : '#f6465d' }}>
-              {val[2]}
-            </div>
+            <div>{val[2]}</div>
           </S.TableBodyItem>
         ))}
     </>
