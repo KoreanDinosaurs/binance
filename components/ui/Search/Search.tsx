@@ -36,6 +36,7 @@ export default function Search() {
         name="search"
         aria-label="Search"
         placeholder="Search"
+        autoComplete="off"
         value={searchVal}
         onChange={handleChange}
         onFocus={handleFocus}
