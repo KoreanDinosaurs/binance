@@ -5,10 +5,16 @@ export const SearchContainer = styled.div`
   align-items: center;
   position: relative;
 
-  svg {
+  > svg:nth-of-type(1) {
     position: absolute;
     fill: var(--color-gray-400);
     left: 7px;
+  }
+
+  > svg:nth-of-type(2) {
+    position: absolute;
+    fill: var(--color-gray-400);
+    right: 7px;
   }
 `
 
@@ -26,4 +32,13 @@ export const Search = styled.input`
     font-size: 12px;
     color: var(--color-gray-400);
   }
+`
+
+export const CancleBtn = styled.button`
+  border: none;
+  color: var(--color-yellow-100);
+  font-size: 14px;
+  margin-left: 0.4rem;
+  background: transparent;
+  cursor: pointer;
 `

@@ -7,11 +7,12 @@ import StarIcon from 'public/image/star.svg'
 
 import * as S from './Table.styled'
 import Router from 'next/router'
+import { searchValue } from 'recoil/SearchMode'
 
 interface TableProps {
   headData?: string[]
   data: string[][] | null
-  mode: 'plain' | 'like'
+  mode: 'plain' | 'like' | 'search'
 }
 
 export default function Table({ mode, data, headData }: TableProps) {
@@ -24,8 +25,10 @@ export default function Table({ mode, data, headData }: TableProps) {
         <S.TableBody>
           {mode === 'plain' ? (
             <PlainTableBodyItem data={data} />
-          ) : (
+          ) : mode === 'like' ? (
             <LikeTableBodyItem data={data} />
+          ) : (
+            <SearchTableBodyItem data={data} />
           )}
         </S.TableBody>
       ) : (
@@ -86,6 +89,28 @@ const LikeTableBodyItem = ({ data }: { data: string[][] }) => {
               />
               {val[0]}
             </S.ItemWithStar>
+            <div>{val[1]}</div>
+            <div style={{ color: val[2][0] == '+' ? '#0ecb81' : '#f6465d' }}>
+              {val[2]}
+            </div>
+          </S.TableBodyItem>
+        ))}
+    </>
+  )
+}
+
+const SearchTableBodyItem = ({ data }: { data: string[][] }) => {
+  const search = useRecoilValue(searchValue)
+  const filterdData = data.filter((val) =>
+    val[0].includes(search.toLocaleUpperCase()),
+  )
+  return (
+    <>
+      {search &&
+        filterdData &&
+        filterdData.map((val, idx) => (
+          <S.TableBodyItem key={idx} onMouseDown={() => handleRouter(val[0])}>
+            <div>{val[0]}</div>
             <div>{val[1]}</div>
             <div style={{ color: val[2][0] == '+' ? '#0ecb81' : '#f6465d' }}>
               {val[2]}

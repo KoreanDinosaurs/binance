@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import { useRecoilValue } from 'recoil'
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil'
+import { searchState, searchValue } from 'recoil/SearchMode'
 import { likeCoin } from 'recoil/LikeAtom'
 
 import Search from 'components/ui/Search'
@@ -17,6 +18,8 @@ export default function Market() {
   const [_, category] = (coinName as string).split('_')
 
   const [activeTab, setActiveTab] = React.useState<string>(category)
+  const [searchMode, setSearchMode] = useRecoilState(searchState)
+  const setSearchVal = useSetRecoilState(searchValue)
 
   const data = JSON.parse(JSON.stringify(Data))
   const likedCoin = useRecoilValue(likeCoin)
@@ -34,8 +37,13 @@ export default function Market() {
     setActiveTab(list)
   }, [])
 
+  const handleFocusOut = React.useCallback(() => {
+    setSearchMode(false)
+    setSearchVal('')
+  }, [setSearchMode, setSearchVal])
+
   return (
-    <S.Market>
+    <S.Market onBlur={handleFocusOut}>
       <div style={{ padding: '1rem 1rem 0' }}>
         <Search />
       </div>
@@ -57,7 +65,7 @@ export default function Market() {
         ))}
       </S.MarketTab>
       <Table
-        mode="like"
+        mode={searchMode ? 'search' : 'like'}
         headData={['Pair', 'Price', 'Chage']}
         data={activeTab == 'like' ? likedCoin : tabData}
       />
