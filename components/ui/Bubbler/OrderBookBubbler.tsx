@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 interface OrderBookBubblerProps {
@@ -12,19 +13,20 @@ export default function OrderBookBubbler({
   amount,
   total,
 }: OrderBookBubblerProps) {
+  const { t } = useTranslation()
   return (
     <BubbleContainer>
       <Bubble>
         <BubbleContent>
-          <div>Price:</div>
+          <div>{t('price')}:</div>
           <div>{price}</div>
         </BubbleContent>
         <BubbleContent>
-          <div>Amount:</div>
+          <div>{t('amount')}:</div>
           <div>{amount}</div>
         </BubbleContent>
         <BubbleContent>
-          <div>Total:</div>
+          <div>{t('total')}:</div>
           <div>{total}</div>
         </BubbleContent>
       </Bubble>
