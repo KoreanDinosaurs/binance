@@ -14,16 +14,20 @@ export default function OrderBook() {
 
   const data = JSON.parse(JSON.stringify(Data))
 
-  const sellData = data.orderBook.sell.map((val: string[]) => [
-    val[0],
-    val[1],
-    String((Number(val[0]) * Number(val[1])).toFixed(2)),
-  ])
-  const buyData = data.orderBook.buy.map((val: string[]) => [
-    val[0],
-    val[1],
-    String((Number(val[0]) * Number(val[1])).toFixed(2)),
-  ])
+  const sellData = data.trade[category][coin].orderBook.sell.map(
+    (val: string[]) => [
+      val[0],
+      val[1],
+      String((Number(val[0]) * Number(val[1])).toFixed(2)),
+    ],
+  )
+  const buyData = data.trade[category][coin].orderBook.buy.map(
+    (val: string[]) => [
+      val[0],
+      val[1],
+      String((Number(val[0]) * Number(val[1])).toFixed(2)),
+    ],
+  )
   return (
     <S.OrderBook>
       <OrderBookTable

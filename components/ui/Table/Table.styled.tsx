@@ -42,12 +42,27 @@ export const TableBody = styled.div`
   font-size: 0.7rem;
   color: var(--color-gray-400);
   flex-grow: 1;
+  overflow: auto;
+  height: 240px;
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(94, 102, 115);
+    border-radius: 3px;
+    height: 30%;
+  }
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, 0.1);
+  }
 `
 
 export const TableBodyItem = styled.div`
   display: flex;
   line-height: 20px;
-  padding: 0 1rem;
+  padding: 0 12px 0 1rem;
   cursor: pointer;
 
   & div:nth-of-type(1) {
@@ -84,4 +99,5 @@ export const EmptyItem = styled.div`
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  height: 240px;
 `
