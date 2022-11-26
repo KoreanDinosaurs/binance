@@ -99,5 +99,5 @@ export const EmptyItem = styled.div`
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  height: 240px;
+  height: 420px;
 `

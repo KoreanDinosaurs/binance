@@ -277,6 +277,15 @@ export default function Chart() {
               },
             },
           },
+          plotOptions: {
+            candlestick: {
+              colors: {
+                upward: '#03a66d',
+                downward: '#cf304a',
+              },
+            },
+          },
+          tooltip: { theme: 'dark' },
         }}
         type="candlestick"
         height="100%"

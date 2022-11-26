@@ -37,9 +37,11 @@ export const InputContainer = styled.div`
 `
 
 export const Input = styled.input`
+  padding-top: 2px;
   text-align: right;
   border: none;
   font-size: 12px;
+  height: 100%;
   background: ${({ theme }) => theme.colors.inputColor};
   outline: none;
 `

@@ -1,13 +1,13 @@
 import React, { ReactNode } from 'react'
-
+import Router from 'next/router'
+import { searchValue } from 'recoil/SearchMode'
+import { orderPriceState } from 'recoil/OrderAtom'
 import { useRecoilValue, useSetRecoilState } from 'recoil'
 import { filteredLikeCoin, likeCoin } from 'recoil/LikeAtom'
 
 import StarIcon from 'public/image/star.svg'
 
 import * as S from './Table.styled'
-import Router from 'next/router'
-import { searchValue } from 'recoil/SearchMode'
 
 interface TableProps {
   headData?: string[]
@@ -44,11 +44,18 @@ const handleRouter = (coin: string) => {
 }
 
 const PlainTableBodyItem = ({ data }: { data: string[][] }) => {
+  const setOrderPrice = useSetRecoilState(orderPriceState)
+  const handleClick = (price: number) => {
+    setOrderPrice(price)
+  }
   return (
     <>
       {data &&
         data.map((val, idx) => (
-          <S.TableBodyItem key={idx} onClick={() => handleRouter(val[0])}>
+          <S.TableBodyItem
+            key={idx}
+            onClick={() => handleClick(Number(val[0]))}
+          >
             <div>{val[0]}</div>
             <div>{val[1]}</div>
             <div>{val[2]}</div>

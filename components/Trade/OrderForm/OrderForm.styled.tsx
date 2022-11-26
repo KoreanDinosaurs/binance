@@ -5,6 +5,7 @@ export const OrderForm = styled.section`
   display: flex;
   width: 100%;
   padding: 1rem 0rem;
+  align-items: center;
 `
 
 export const Order = styled.div`
@@ -13,4 +14,15 @@ export const Order = styled.div`
   gap: 1rem;
   width: 100%;
   flex-direction: column;
+`
+
+export const OrderSeed = styled.div`
+  font-size: 0.7rem;
+  & > span:nth-of-type(1) {
+    color: ${({ theme }) => theme.colors.subColor};
+  }
+  & > span:nth-of-type(2) {
+    color: ${({ theme }) => theme.colors.textColor};
+    font-weight: 600;
+  }
 `
