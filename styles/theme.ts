@@ -6,7 +6,7 @@ const Darktheme: DefaultTheme = {
     subColor: '#707a8a',
     bgColor: '#fafafa',
     subBgColor: 'white',
-    inputColor: '#f2f3f5',
+    inputColor: '#e6e8ea',
     labelColor: '#252930',
   },
 }
