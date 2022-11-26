@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     color: ${({ theme }) => theme.colors.textColor};
+    height: 100%;
     background-color: #eef0f2;
     font-family: 'Noto Sans KR', sans-serif;
     -moz-user-select: none;
@@ -38,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
     cursor: pointer;
   }
-  svg, button {
+  svg, button, img {
     cursor: pointer;
   }
   * {

@@ -1,9 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-
-import data from 'data.json'
-import { useRouter } from 'next/router'
+import Router, { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 
 import MenuIcon from 'public/image/menu.svg'
@@ -21,6 +19,7 @@ export default function Header() {
         height={24}
         alt="바이낸스 로고"
         priority
+        onClick={() => Router.push('/')}
       />
       <Navigation />
       <S.Block />

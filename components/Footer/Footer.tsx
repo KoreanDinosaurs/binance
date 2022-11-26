@@ -11,5 +11,8 @@ const FooterComponent = styled.footer`
   align-items: center;
   padding: 0 1rem;
   font-size: 0.8rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   border-top: 1px solid var(--color-border);
 `
