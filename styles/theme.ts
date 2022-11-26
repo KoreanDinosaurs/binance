@@ -8,6 +8,7 @@ const Darktheme: DefaultTheme = {
     subBgColor: 'white',
     inputColor: '#e6e8ea',
     labelColor: '#252930',
+    progressColor: '#b7bdc6',
   },
 }
 
@@ -19,6 +20,7 @@ const Lighttheme: DefaultTheme = {
     subBgColor: '#252930',
     inputColor: '#252930',
     labelColor: '#707a8a',
+    progressColor: '#474d5c',
   },
 }
 

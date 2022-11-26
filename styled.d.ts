@@ -9,6 +9,7 @@ declare module 'styled-components' {
       subBgColor: string
       inputColor: string
       labelColor: string
+      progressColor: string
     }
   }
 }

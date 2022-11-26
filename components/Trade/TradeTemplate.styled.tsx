@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Trade = styled.main`
   display: grid;
-  grid-template-rows: 68px 320px 160px 160px auto 285px;
+  grid-template-rows: 68px 320px 160px 160px auto;
   grid-template-columns:
     1fr minmax(253px, 320px) minmax(510px, 880px) minmax(253px, 320px)
     1fr;
@@ -11,8 +11,7 @@ export const Trade = styled.main`
     'left orderbook chart market right'
     'left orderbook chart trades right'
     'left orderbook orderform trades right'
-    'left orderbook orderform marketActivity right'
-    'left basictable basictable basictable right';
+    'left orderbook orderform trades right';
   grid-gap: 1px;
   margin-top: 1px;
 `

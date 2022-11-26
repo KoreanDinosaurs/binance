@@ -6,7 +6,7 @@ export default function Footer() {
 }
 
 const FooterComponent = styled.footer`
-  height: 30px;
+  height: 40px;
   display: flex;
   align-items: center;
   padding: 0 1rem;

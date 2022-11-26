@@ -43,7 +43,7 @@ export const TableBody = styled.div`
   color: var(--color-gray-400);
   flex-grow: 1;
   overflow: auto;
-  height: 240px;
+  height: 420px;
 
   &::-webkit-scrollbar-thumb {
     background: rgb(94, 102, 115);
