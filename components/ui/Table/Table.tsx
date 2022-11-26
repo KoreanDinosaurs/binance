@@ -4,6 +4,7 @@ import { searchValue } from 'recoil/SearchMode'
 import { orderPriceState } from 'recoil/OrderAtom'
 import { useRecoilValue, useSetRecoilState } from 'recoil'
 import { filteredLikeCoin, likeCoin } from 'recoil/LikeAtom'
+import { useTranslation } from 'react-i18next'
 
 import StarIcon from 'public/image/star.svg'
 
@@ -16,6 +17,7 @@ interface TableProps {
 }
 
 export default function Table({ mode, data, headData }: TableProps) {
+  const { t } = useTranslation('common')
   return (
     <S.Table>
       <S.TableHead>
@@ -32,7 +34,7 @@ export default function Table({ mode, data, headData }: TableProps) {
           )}
         </S.TableBody>
       ) : (
-        <S.EmptyItem>조회된 내역이 없습니다.</S.EmptyItem>
+        <S.EmptyItem>{t('noData')}</S.EmptyItem>
       )}
     </S.Table>
   )

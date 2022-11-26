@@ -1,0 +1,15 @@
+{
+  "price": "Price",
+  "amount": "Amount",
+  "total": "Total",
+  "search": "Search",
+  "time": "Time",
+  "marketTrades": "Market Trades",
+  "myTrades": "My Trades",
+  "pair": "Pair",
+  "change": "Change",
+  "avbl": "Avbl",
+  "buy": "Buy",
+  "sell": "Sell",
+  "noData": "no Data"
+}

@@ -31,25 +31,91 @@ export default function Header() {
 }
 
 const Navigation = () => {
-  const { t } = useTranslation('header')
-
+  const { t } = useTranslation('drop')
+  const { t: T } = useTranslation('header')
+  const data = [
+    {
+      title: `${t('exchange')}`,
+      content: `${t('exchangeInfo')}`,
+    },
+    {
+      title: `${t('academy')}`,
+      content: `${t('academyInfo')}`,
+    },
+    {
+      title: `${t('link')}`,
+      content: `${t('linkInfo')}`,
+    },
+    {
+      title: `${t('institution')}`,
+      content: `${t('institutionInfo')}`,
+    },
+    {
+      title: `${t('learn')}`,
+      content: `${t('learnInfo')}`,
+    },
+    {
+      title: `${t('charity')}`,
+      content: `${t('charityInfo')}`,
+    },
+    {
+      title: `${t('cloud')}`,
+      content: `${t('cloudInfo')}`,
+    },
+    {
+      title: `${t('dex')}`,
+      content: `${t('dexInfo')}`,
+    },
+    {
+      title: `${t('labs')}`,
+      content: `${t('labsInfo')}`,
+    },
+    {
+      title: `${t('launchpad')}`,
+      content: `${t('launchpadInfo')}`,
+    },
+    {
+      title: `${t('research')}`,
+      content: `${t('researchInfo')}`,
+    },
+    {
+      title: `${t('wallet')}`,
+      content: `${t('walletInfo')}`,
+    },
+    {
+      title: `${t('gift')}`,
+      content: `${t('giftInfo')}`,
+    },
+    {
+      title: `${t('live')}`,
+      content: `${t('liveInfo')}`,
+    },
+    {
+      title: `${t('api')}`,
+      content: `${t('apiInfo')}`,
+    },
+    {
+      title: `${t('babt')}`,
+      content: `${t('babtInfo')}`,
+    },
+  ]
   return (
     <S.Nav>
       <S.Nav__ul>
         <li>
-          <DropDown category={data.menu.All} column={3}>
+          <DropDown category={data} column={3}>
             <MenuIcon width={20} height={20} />
           </DropDown>
         </li>
-        <li>{t('buy')}</li>
-        <li>{t('markets')}</li>
-        <li>{t('trade')}</li>
-        <li>{t('derivatives')}</li>
-        <li>{t('earn')}</li>
-        <li>{t('finance')}</li>
-        <li>{t('nft')}</li>
-        <li>{t('institutional')}</li>
-        <li>{t('feed')}</li>
+        <li>{T('buy')}</li>
+        <li>{T('markets')}</li>
+        <li>{T('trade')}</li>
+        <li>{T('derivatives')}</li>
+        <li>{T('earn')}</li>
+        <li>{T('finance')}</li>
+        <li>{T('nft')}</li>
+        <li>{T('institutional')}</li>
+        <li>{T('feed')}</li>
       </S.Nav__ul>
     </S.Nav>
   )

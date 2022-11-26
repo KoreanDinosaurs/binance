@@ -1,0 +1,15 @@
+{
+  "price": "가격",
+  "amount": "수량",
+  "total": "합계",
+  "search": "검색",
+  "time": "시간",
+  "marketTrades": "시장 거래",
+  "myTrades": "내 거래",
+  "pair": "쌍",
+  "change": "등락",
+  "avbl": "가용액",
+  "buy": "구매",
+  "sell": "매도",
+  "noData": "조회된 내역이 없습니다."
+}

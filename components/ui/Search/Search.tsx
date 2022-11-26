@@ -6,6 +6,7 @@ import CancleIcon from 'public/image/cross-icon.svg'
 import * as S from './Search.styled'
 import { useRecoilState } from 'recoil'
 import { searchState, searchValue } from 'recoil/SearchMode'
+import { useTranslation } from 'react-i18next'
 
 export default function Search() {
   const [searchMode, setSearchMode] = useRecoilState(searchState)
@@ -25,6 +26,8 @@ export default function Search() {
     setSearchVal(e.target.value)
   }
 
+  const { t } = useTranslation('common')
+
   return (
     <S.SearchContainer>
       <SearchIcon width={13} height={13} />
@@ -35,7 +38,7 @@ export default function Search() {
         type="text"
         name="search"
         aria-label="Search"
-        placeholder="Search"
+        placeholder={`${t('search')}`}
         autoComplete="off"
         value={searchVal}
         onChange={handleChange}

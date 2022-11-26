@@ -1,0 +1,8 @@
+{
+  "price": "Price",
+  "change": "24h Change",
+  "high": "24h High",
+  "low": "24h Low",
+  "volume1": "24h Volume",
+  "volume2": "24h Volume"
+}

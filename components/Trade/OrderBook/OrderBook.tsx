@@ -6,6 +6,7 @@ import OrderBookTable from 'components/ui/Table/OrderBookTable'
 import Data from 'data.json'
 
 import * as S from './OrderBook.styled'
+import { useTranslation } from 'react-i18next'
 
 export default function OrderBook() {
   const router = useRouter()
@@ -13,6 +14,7 @@ export default function OrderBook() {
   const [coin, category] = (coinName as string).split('_')
 
   const data = JSON.parse(JSON.stringify(Data))
+  const { t } = useTranslation('common')
 
   const sellData = data.trade[category][coin].orderBook.sell.map(
     (val: string[]) => [
@@ -32,7 +34,11 @@ export default function OrderBook() {
     <S.OrderBook>
       <OrderBookTable
         data={sellData}
-        headData={['Price', 'Amount', 'Total']}
+        headData={[
+          `${t('price')}(USD)`,
+          `${t('amount')}(${coin})`,
+          `${t('total')}`,
+        ]}
         mode="buy"
       />
       <S.CoinPrice>

@@ -1,9 +1,10 @@
 import React from 'react'
+import { useRouter } from 'next/router'
+import { useTranslation } from 'react-i18next'
 
 import Data from 'data.json'
 
 import * as S from './SubHeader.styled'
-import { useRouter } from 'next/router'
 
 export default function SubHeader() {
   const router = useRouter()
@@ -13,6 +14,8 @@ export default function SubHeader() {
   const data = JSON.parse(JSON.stringify(Data))
   const detail = data.trade[category][coin]
 
+  const { t } = useTranslation('subHeader')
+
   return (
     <S.SubHeader>
       <S.Coin>
@@ -20,27 +23,33 @@ export default function SubHeader() {
       </S.Coin>
       <S.CoinInfoContainer>
         <S.CoinInfoItem>
-          <div>price</div>
+          <div>{t('price')}</div>
           <div>{detail.price}</div>
         </S.CoinInfoItem>
         <S.CoinInfoItem>
-          <div>24h Change</div>
+          <div>{t('change')}</div>
           <div>{`${detail.change} ${detail.changePercentage}`}</div>
         </S.CoinInfoItem>
         <S.CoinInfoItem>
-          <div>24h High</div>
+          <div>{t('high')}</div>
           <div>{detail.high}</div>
         </S.CoinInfoItem>
         <S.CoinInfoItem>
-          <div>24h Low</div>
+          <div>{t('low')}</div>
           <div>{detail.low}</div>
         </S.CoinInfoItem>
         <S.CoinInfoItem>
-          <div>{`24h Volume(${coin})`}</div>
+          <div>
+            {t('volume1')}
+            {`(${coin})`}
+          </div>
           <div>{detail.volume[0]}</div>
         </S.CoinInfoItem>
         <S.CoinInfoItem>
-          <div>{`24h Volume(${category})`}</div>
+          <div>
+            {t('volume1')}
+            {`(${category})`}
+          </div>
           <div>{detail.volume[1]}</div>
         </S.CoinInfoItem>
       </S.CoinInfoContainer>

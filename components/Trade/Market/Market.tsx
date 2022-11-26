@@ -11,6 +11,7 @@ import StarIcon from 'public/image/star.svg'
 import Data from 'data.json'
 
 import * as S from './Market.styled'
+import { useTranslation } from 'react-i18next'
 
 export default function Market() {
   const router = useRouter()
@@ -42,6 +43,8 @@ export default function Market() {
     setSearchVal('')
   }, [setSearchMode, setSearchVal])
 
+  const { t } = useTranslation('common')
+
   return (
     <S.Market onBlur={handleFocusOut}>
       <div style={{ padding: '1rem 1rem 0' }}>
@@ -66,7 +69,7 @@ export default function Market() {
       </S.MarketTab>
       <Table
         mode={searchMode ? 'search' : 'like'}
-        headData={['Pair', 'Price', 'Chage']}
+        headData={[`${t('pair')}`, `${t('price')}`, `${t('change')}`]}
         data={activeTab == 'like' ? likedCoin : tabData}
       />
     </S.Market>
