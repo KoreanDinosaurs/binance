@@ -6,6 +6,7 @@ import Header from './Header'
 
 import { ThemeProvider } from 'styled-components'
 import { Darktheme, Lighttheme } from 'styles/theme'
+import Footer from './Footer/Footer'
 
 export default function Layout({ children }: { children: ReactNode }) {
   const theme = useRecoilValue(themeState)
@@ -15,6 +16,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <ThemeProvider theme={theme ? Lighttheme : Darktheme}>
         <Header />
         {children}
+        <Footer />
       </ThemeProvider>
     </>
   )

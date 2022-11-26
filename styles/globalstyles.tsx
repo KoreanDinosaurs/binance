@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     -ms-user-select: none;
     user-select: none;
   }
-  section, header {
+  section, header, footer {
     background-color: ${({ theme }) => theme.colors.bgColor};
   }
   a {
