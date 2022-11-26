@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
     --color-gray-300: #e0e0e0;
     --color-gray-400: #707a8a;
 
+    --color-red-100: #cf304a;
+
+    --color-green-100: #03a66d;
+
     --color-border: #eef0f2;
   }
   html,
@@ -34,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
     cursor: pointer;
   }
-  svg {
+  svg, button {
     cursor: pointer;
   }
   * {
